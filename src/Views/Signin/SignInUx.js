@@ -16,10 +16,11 @@ const SignInUx = ({
     <Page
       showNavBar={true}
       useAbsoluteCenter={true}
-      pageTitle="Crea tu cuenta"
+      pageTitle="App de Vacunación"
     >
       <img src={Logo}/>
       <form style={{ minWidth: "380px", maxWidth: "640px"}}>
+      <h1 style={{textAlign: "center"}}>Crea tu cuenta</h1>
         <Field
           name="nombre"
           labelText="Nombre"

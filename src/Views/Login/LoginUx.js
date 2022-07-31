@@ -17,10 +17,11 @@ const LoginInUx = ({
     <Page
       showNavBar={true}
       useAbsoluteCenter={true}
-      pageTitle="Iniciar Sesión"
+      pageTitle="App de Vacunación"
     >
       <img src={Logo}/>
       <form style={{ minWidth: "380px", maxWidth: "640px" }}>
+        <h1 style={{textAlign: "center"}}>Iniciar sesión</h1>
         <Field
           name="email"
           labelText="Correo Electrónico"
