@@ -14,6 +14,14 @@ const Menu = () => {
          Navigator('/login');
     }
 
+    const signin = () => {
+        Navigator('/signin');
+    }
+
+    const SearchCarnet = () => {
+        Navigator('/search');
+    }
+
     return (
        
         <Page
@@ -32,8 +40,8 @@ const Menu = () => {
                 <div>
                     <Buttons>
                         <button class="button button1" onClick={navegar}>Citas</button>
-                        <button class="button button2" onClick={navegar}>Usuario</button>
-                        <button class="button button1" onClick={navegar}>Carnet</button>
+                        <button class="button button2" onClick={signin}>Usuario</button>
+                        <button class="button button1" onClick={SearchCarnet}>Carnet</button>
                         <button class="button button2" onClick={navegar}>Vacunas</button>
                     </Buttons>
                 </div>

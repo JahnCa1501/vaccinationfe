@@ -19,6 +19,15 @@ const ModalPicker = () => {
     const navegar = () => {
          Navigator('/login');
     }
+
+    const signin = () => {
+        Navigator('/signin');
+    }
+
+    const SearchCarnet = () => {
+        Navigator('/search');
+    }
+
     return (
         <div>
             <div className='buttons'>
@@ -35,8 +44,8 @@ const ModalPicker = () => {
                     <div style={{textAlign: "center"}}>
                     <Buttons>
                         <button class="button button1" onClick={navegar}>Citas</button>
-                        <button class="button button2" onClick={navegar}>Usuario</button> <br />
-                        <button class="button button1" onClick={navegar}>Carnet</button> <br />
+                        <button class="button button2" onClick={signin}>Usuario</button> <br />
+                        <button class="button button1" onClick={SearchCarnet}>Carnet</button> <br />
                         <button class="button button2" onClick={navegar}>Vacunas</button>
                     </Buttons>
                     </div>

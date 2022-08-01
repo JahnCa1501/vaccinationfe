@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Route, Routes as Switch, Navigate } from 'reac
 import PrivateRoute from './Components/PrivateRoute';
 import Login from './Views/Login';
 import SignIn from './Views/Signin';
-import Summary from './Views/Summary';
+import Search from './Views/Search'
 import Menu from './Views/Menu';
 
 const Routes = () => {
@@ -12,8 +12,8 @@ const Routes = () => {
         <Route path="/" element={<Navigate to="/login" />} />
         <Route path='/login' element={<Login />} />
         <Route path='/signin' element={<SignIn />} />
-        <Route path="/home" element={<PrivateRoute><Summary /></PrivateRoute>} />
-        <Route path='/menu' element={<Menu />}/>
+        <Route path='/search' element={<Search />} />
+        <Route path="/menu" element={<Menu />} />
       </Switch>
     </Router>
   );

@@ -37,7 +37,6 @@ const LoginInUx = ({
         />
         <Buttons>
           <button className="button button1" onClick={onLoginClick}>Iniciar Sesión</button>
-          <button className="button button2" onClick={onSignInClick}>¿No tienes cuenta? Crea una</button>
         </Buttons>
         {error && <ErrorField>{error}</ErrorField>}
       </form>

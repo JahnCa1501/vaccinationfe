@@ -8,8 +8,8 @@ const SummaryUx = ({ summaryData, onClickHandler, children }) => {
         <BalanceCard
           key={o._id}
           type={o._id}
-          documents={o.count}
-          amount={o.amount}
+          documents={o.nombre}
+          amount={o.identidad}
           onClicked={() => onClickHandler(o._id)}
         />
       )
