@@ -12,6 +12,7 @@ const Routes = () => {
         <Route path='/login' element={<Login />} />
         <Route path='/signin' element={<SignIn />} />
         <Route path="/home" element={<PrivateRoute><Summary /></PrivateRoute>} />
+        
       </Switch>
     </Router>
   );
