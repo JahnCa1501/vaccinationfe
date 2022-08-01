@@ -5,7 +5,15 @@ import getSignIn from "../../Services/api/signinapi";
 
 const SignIn = () => {
   const Navigator = useNavigate();
-  const [formValues, setFormValues] = useState({ email: '', password: '' });
+  const [formValues, setFormValues] = useState({ 
+    email: '',
+    password: '',
+    name: '',
+    direccion: '',
+    sexo: '',
+    numero: '',
+    id: '',
+    date: new Date() });
   const onChangeHandler = (event) => {
     let { name, value } = event.target;
     let newFormValues = {
@@ -20,9 +28,16 @@ const SignIn = () => {
     try {
       const data = await getSignIn(
         formValues.email,
-        formValues.password
+        formValues.password,
+        formValues.name,
+        formValues.direccion,
+        formValues.sexo,
+        formValues.numero,
+        formValues.id,
+        formValues.date
       );
       Navigator('/login');
+      console.log(data);
     } catch (ex) {
       console.log(ex);
     }
@@ -36,6 +51,12 @@ const SignIn = () => {
     <SignInUx
       passwordValue={formValues.password}
       emailValue={formValues.email}
+      nameValue = {formValues.name}
+      numeroValue = {formValues.numero}
+      direccionValue = {formValues.direccion}
+      sexoValue = {formValues.sexo}
+      idValue = {formValues.id}
+      dateValue = {formValues.date}
       onSignInClick={onSignInClick}
       onLoginClick={onLoginClick}
       onChangeHandler={onChangeHandler}

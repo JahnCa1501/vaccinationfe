@@ -3,7 +3,6 @@ import { Field } from '../../Components/InputField';
 import Buttons from '../../Components/Buttons';
 import ErrorField from "../../Components/ErrorField";
 import Logo from '../../Components/Images/Vacuna.png';
-import LogoDesign from '../../Components/Logo';
 
 const LoginInUx = ({
   emailValue = "",
@@ -37,8 +36,8 @@ const LoginInUx = ({
           onChange={onChangeHandler}
         />
         <Buttons>
-          <button class="button button1" onClick={onLoginClick}>Iniciar Sesión</button>
-          <button class="button button2" onClick={onSignInClick}>¿No tienes cuenta? Crea una</button>
+          <button className="button button1" onClick={onLoginClick}>Iniciar Sesión</button>
+          <button className="button button2" onClick={onSignInClick}>¿No tienes cuenta? Crea una</button>
         </Buttons>
         {error && <ErrorField>{error}</ErrorField>}
       </form>
