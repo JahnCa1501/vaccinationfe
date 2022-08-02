@@ -10,6 +10,7 @@ export const submitLogin = async (dispatch, email, password) => {
   try {
     dispatch({ type: LOGIN_LOADING, payload: null });
     const { data } = await loginApi(email, password);
+    localStorage.setItem('Nombre', data.nombre);
     dispatch({ type: LOGIN_SUCCESS, payload: data });
     console.log(data);
     setAuth(data.token);

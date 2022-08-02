@@ -34,7 +34,7 @@ const SignInUx = ({
           onChange={onChangeHandler}
         />
         <Field
-          name="name"
+          name="nombre"
           labelText="Nombre"
           type="text"
           value={nameValue}

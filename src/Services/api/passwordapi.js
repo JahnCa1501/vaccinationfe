@@ -1,8 +1,8 @@
-import { axiosPublic } from './axios';
+import { axiosPrivate } from './axios';
 
 const getPassword = (email) => {
-  return axiosPublic.post(
-    '/password',
+  return axiosPrivate.post(
+    '/auth/recuperar',
     {
       email,
     }

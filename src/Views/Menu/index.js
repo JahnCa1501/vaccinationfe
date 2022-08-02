@@ -6,7 +6,7 @@ import TitulosInicio from '../../Components/StartTittles';
 import Presentation from '../../Components/Presentation';
 import { useNavigate } from 'react-router-dom';
 
-var nombre = "Lizzi Silva";
+var nombre = localStorage.getItem('Nombre');
 
 const Menu = () => {
     const Navigator = useNavigate();

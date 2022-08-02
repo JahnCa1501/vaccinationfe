@@ -6,7 +6,7 @@ import './ModalPicker.css';
 import { FaBars } from "react-icons/fa";
 import { FaWindowClose } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
-import ButtonClose from '../ButtonsReturn';
+import ButtonClose from '../ButtonsLogout';
 
 const ModalPicker = () => {
     const [open, setOpen] = React.useState(false);

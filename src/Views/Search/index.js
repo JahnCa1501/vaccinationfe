@@ -1,4 +1,4 @@
-
+import ButtonsReturn from '../../Components/ButtonsReturn';
 import { React, useState } from "react";
 import TextField from "@mui/material/TextField";
 import List from "./App";
@@ -14,6 +14,7 @@ function App() {
 
   return (
     <div className="main">
+      <ButtonsReturn></ButtonsReturn>
       <h1>Buscar Carnet</h1>
       <div className="search">
         <TextField
