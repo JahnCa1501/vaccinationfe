@@ -36,6 +36,9 @@ const Login = () => {
       console.log(ex);
     }
   }
+  const password = () => {
+    Navigator('/password');
+  }
 
   return (
     <LoginUx
@@ -44,6 +47,7 @@ const Login = () => {
       onSignInClick={onSignInClick}
       onLoginClick={onLoginClick}
       onChangeHandler={onChangeHandler}
+      password={password}
       isLoading={isLoading}
       error={error}
     />

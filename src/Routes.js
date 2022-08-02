@@ -5,6 +5,7 @@ import SignIn from './Views/Signin';
 import Summary from './Views/Summary';
 import Menu from './Views/Menu';
 import Appointment from './Views/Appointment';
+import Password from './Views/Password';
 
 const Routes = () => {
   return (
@@ -16,6 +17,7 @@ const Routes = () => {
         <Route path="/home" element={<PrivateRoute><Summary /></PrivateRoute>} />
         <Route path='/menu' element={<Menu />}/>
         <Route path='/citas' element={<Appointment />}/>
+        <Route path='/password' element={<Password />}/>
       </Switch>
     </Router>
   );
