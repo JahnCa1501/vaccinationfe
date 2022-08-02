@@ -26,6 +26,9 @@ const ModalPicker = () => {
     const cerrarsesion = () => {
         Navigator('/login');
     }
+    const SignIn = () => {
+        Navigator('/signin');
+    }
     return (
         <div>
             <div className='buttons'>
@@ -42,7 +45,7 @@ const ModalPicker = () => {
                     <div style={{textAlign: "center"}}>
                     <Buttons>
                         <button class="button button1" onClick={citas}>Citas</button>
-                        <button class="button button2" onClick={navegar}>Usuario</button> <br />
+                        <button class="button button2" onClick={SignIn}>Usuario</button> <br />
                         <button class="button button1" onClick={navegar}>Carnet</button> <br />
                         <button class="button button2" onClick={navegar}>Vacunas</button>
                     </Buttons>
