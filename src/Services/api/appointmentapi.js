@@ -2,7 +2,7 @@ import { axiosPublic } from './axios';
 
 const getAppointment = (fecha, id, establecimiento) => {
   return axiosPublic.post(
-    '/auth/appointment',
+    '/citas/new',
     {
       fecha,
       id,

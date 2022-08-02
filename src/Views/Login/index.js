@@ -31,7 +31,7 @@ const Login = () => {
     e.stopPropagation();
     try {
       await submitLogin(dispatch, formValues.email, formValues.password);
-      Navigator('/home')
+      Navigator('/menu')
     } catch (ex) {
       console.log(ex);
     }

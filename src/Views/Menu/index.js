@@ -19,6 +19,9 @@ const Menu = () => {
     const SignIn = () => {
         Navigator('/signin');
     }
+    const Vacunas = () => {
+        Navigator('/vacunas');
+    }
     return (
        
         <Page
@@ -39,7 +42,7 @@ const Menu = () => {
                         <button class="button button1" onClick={citas}>Citas</button>
                         <button class="button button2" onClick={SignIn}>Usuario</button>
                         <button class="button button1" onClick={navegar}>Carnet</button>
-                        <button class="button button2" onClick={navegar}>Vacunas</button>
+                        <button class="button button2" onClick={Vacunas}>Vacunas</button>
                     </Buttons>
                 </div>
             </div>
