@@ -6,7 +6,7 @@ import Logo from '../../Components/Images/Vacuna.png';
 const PasswordUx = ({
   emailValue = "",
   onChangeHandler = () => { },
-  onPasswordClick = () => { },
+  onSignInClick = () => { },
   onLoginClick = () => { }
 }) => {
   return (
@@ -27,7 +27,7 @@ const PasswordUx = ({
         />
         <div style={{ paddingLeft: "80px" }}>
           <Buttons>
-            <button class="button button1" onClick={onPasswordClick}>Enviar Correo</button>
+            <button class="button button1" onClick={onSignInClick}>Enviar Correo</button>
             <button class="button button2" onClick={onLoginClick}>Cancelar</button>
           </Buttons>
         </div>

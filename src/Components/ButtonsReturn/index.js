@@ -1,15 +1,15 @@
 import './ButtonsReturn.css';
-import { FaSignOutAlt } from "react-icons/fa";
+import { FaHome } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 
 const ButtonsReturn = ({ title })=> {
     const Navigator = useNavigate();
     const navegar = () => {
-         Navigator('/login');
+         Navigator('/menu');
     }
     return(
             <button className="buttonsreturn" onClick={navegar}>
-              <FaSignOutAlt />
+              <FaHome />
             </button>
     );
 }

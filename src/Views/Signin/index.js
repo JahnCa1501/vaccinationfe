@@ -8,7 +8,7 @@ const SignIn = () => {
   const [formValues, setFormValues] = useState({ 
     email: '',
     password: '',
-    name: '',
+    nombre: '',
     direccion: '',
     sexo: '',
     numero: '',
@@ -29,7 +29,7 @@ const SignIn = () => {
       const data = await getSignIn(
         formValues.email,
         formValues.password,
-        formValues.name,
+        formValues.nombre,
         formValues.direccion,
         formValues.sexo,
         formValues.numero,
@@ -51,7 +51,7 @@ const SignIn = () => {
     <SignInUx
       passwordValue={formValues.password}
       emailValue={formValues.email}
-      nameValue = {formValues.name}
+      nameValue = {formValues.nombre}
       numeroValue = {formValues.numero}
       direccionValue = {formValues.direccion}
       sexoValue = {formValues.sexo}
