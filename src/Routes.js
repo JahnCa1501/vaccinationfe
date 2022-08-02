@@ -5,6 +5,7 @@ import Menu from './Views/Menu';
 import Appointment from './Views/Appointment';
 import Vacunas from './Views/Vacunas';
 import Search from './Views/Search'
+import Password from './Views/Password';
 
 const Routes = () => {
   return (
@@ -17,6 +18,7 @@ const Routes = () => {
         <Route path='/citas' element={<Appointment />}/>
         <Route path='/search' element={<Search />}/>
         <Route path='/vacunas' element={<Vacunas />}/>
+        <Route path='/password' element={<Password />}/>
       </Switch>
     </Router>
   );
