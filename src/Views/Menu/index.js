@@ -22,6 +22,9 @@ const Menu = () => {
     const Vacunas = () => {
         Navigator('/vacunas');
     }
+    const Search = () => {
+        Navigator('/search');
+    }
     return (
        
         <Page
@@ -41,7 +44,7 @@ const Menu = () => {
                     <Buttons>
                         <button class="button button1" onClick={citas}>Citas</button>
                         <button class="button button2" onClick={SignIn}>Usuario</button>
-                        <button class="button button1" onClick={navegar}>Carnet</button>
+                        <button class="button button1" onClick={Search}>Carnet</button>
                         <button class="button button2" onClick={Vacunas}>Vacunas</button>
                     </Buttons>
                 </div>
