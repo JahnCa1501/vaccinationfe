@@ -23,9 +23,6 @@ const ModalPicker = () => {
     const citas = () => {
         Navigator('/citas');
     }
-    const cerrarsesion = () => {
-        Navigator('/login');
-    }
     const SignIn = () => {
         Navigator('/signin');
     }
