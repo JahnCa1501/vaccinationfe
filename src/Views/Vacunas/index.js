@@ -1,7 +1,7 @@
-import AppointmentUx from "./AppointmentUx";
+import VacunasUX from "./VacunasUX";
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import getAppointment from "../../Services/api/appointmentapi";
+import getAppointment from "../../Services/api/vaccineapi";
 
 
 const Appointment = () => {
@@ -9,7 +9,7 @@ const Appointment = () => {
   const [formValues, setFormValues] = useState({ 
     fecha: '',
     id:'',
-    establecimiento: '' });
+    vacuna: '' });
   const onChangeHandler = (event) => {
     let { name, value } = event.target;
     let newFormValues = {
@@ -25,9 +25,9 @@ const Appointment = () => {
       const data = await getAppointment(
         formValues.fecha,
         formValues.id,
-        formValues.establecimiento
+        formValues.vacuna
       );
-      Navigator('/citas');
+      Navigator('/vacunas');
       console.log(data);
     } catch (ex) {
       console.log(ex);
@@ -39,11 +39,10 @@ const Appointment = () => {
     Navigator("/menu");
   }
   return (
-    <AppointmentUx
-      passwordValue={formValues.password}
+    <VacunasUX
       fechaValue={formValues.fecha}
       idValue = {formValues.id}
-      establecimientoValue = {formValues.establecimiento}
+      vacunaValue = {formValues.vacuna}
       onAppointmentClick={onAppointmentClick}
       onMenuClick={onMenuClick}
       onChangeHandler={onChangeHandler}
