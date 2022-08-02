@@ -6,6 +6,7 @@ import './ModalPicker.css';
 import { FaBars } from "react-icons/fa";
 import { FaWindowClose } from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
+import ButtonClose from '../ButtonsReturn';
 
 const ModalPicker = () => {
     const [open, setOpen] = React.useState(false);
@@ -18,6 +19,12 @@ const ModalPicker = () => {
     const Navigator = useNavigate();
     const navegar = () => {
          Navigator('/login');
+    }
+    const citas = () => {
+        Navigator('/citas');
+    }
+    const cerrarsesion = () => {
+        Navigator('/login');
     }
     return (
         <div>
@@ -34,11 +41,13 @@ const ModalPicker = () => {
                     <h2 id="modal-menu">Menú</h2>
                     <div style={{textAlign: "center"}}>
                     <Buttons>
-                        <button class="button button1" onClick={navegar}>Citas</button>
+                        <button class="button button1" onClick={citas}>Citas</button>
                         <button class="button button2" onClick={navegar}>Usuario</button> <br />
                         <button class="button button1" onClick={navegar}>Carnet</button> <br />
                         <button class="button button2" onClick={navegar}>Vacunas</button>
                     </Buttons>
+                    <ButtonClose>
+                    </ButtonClose>
                     </div>
                 </Box>
             </Modal>

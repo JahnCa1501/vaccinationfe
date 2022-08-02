@@ -4,6 +4,7 @@ import Login from './Views/Login';
 import SignIn from './Views/Signin';
 import Summary from './Views/Summary';
 import Menu from './Views/Menu';
+import Appointment from './Views/Appointment';
 
 const Routes = () => {
   return (
@@ -14,6 +15,7 @@ const Routes = () => {
         <Route path='/signin' element={<SignIn />} />
         <Route path="/home" element={<PrivateRoute><Summary /></PrivateRoute>} />
         <Route path='/menu' element={<Menu />}/>
+        <Route path='/citas' element={<Appointment />}/>
       </Switch>
     </Router>
   );
