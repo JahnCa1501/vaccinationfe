@@ -29,6 +29,9 @@ const ModalPicker = () => {
     const Vacunas = () => {
         Navigator('/vacunas');
     }
+    const Search = () => {
+        Navigator('/search');
+    }
     return (
         <div>
             <div className='buttons'>
@@ -46,7 +49,7 @@ const ModalPicker = () => {
                     <Buttons>
                         <button class="button button1" onClick={citas}>Citas</button>
                         <button class="button button2" onClick={SignIn}>Usuario</button> <br />
-                        <button class="button button1" onClick={navegar}>Carnet</button> <br />
+                        <button class="button button1" onClick={Search}>Carnet</button> <br />
                         <button class="button button2" onClick={Vacunas}>Vacunas</button>
                     </Buttons>
                     <ButtonClose>

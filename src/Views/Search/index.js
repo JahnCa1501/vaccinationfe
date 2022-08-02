@@ -1,26 +1,38 @@
-import { axiosPrivate } from "../../Services/api/axios";
-import React from "react";
 
-const baseURL = "/carnet/all";
+import { React, useState } from "react";
+import TextField from "@mui/material/TextField";
+import List from "./App";
+import "./App.css";
 
-const Search = ()=> {
-  const [post, setPost] = React.useState(null);
-
-  React.useEffect(() => {
-    axiosPrivate.get(baseURL).then((response) => {
-      setPost(response.data);
-      console.log(response);
-    });
-  }, []);
-
-  if (!post) return null;
+function App() {
+  const [inputText, setInputText] = useState("");
+  let inputHandler = (e) => {
+    //convert input text to lower case
+    var lowerCase = e.target.value.toLowerCase();
+    setInputText(lowerCase);
+  };
 
   return (
-    <div>
-      <h1>{post.nombre}</h1>
-      <p>{post.identidad}</p>
+    <div className="main">
+      <h1>Buscar Carnet</h1>
+      <div className="search">
+        <TextField
+          id="outlined-basic"
+          onChange={inputHandler}
+          variant="outlined"
+          fullWidth
+          label="Search"
+        />
+      </div>
+      <div class="cards">
+      <div className="card">
+      <div className="contenido-texto-card">
+      <List input={inputText} />
+      </div>
+      </div>
+      </div>
     </div>
   );
 }
 
-export default Search; 
+export default App;
